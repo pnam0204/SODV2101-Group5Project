@@ -1,0 +1,27 @@
+C:\Users\Owner\source\repos\Group5Project\obj\Debug\Group5Project.csproj.AssemblyReference.cache
+C:\Users\Owner\source\repos\Group5Project\obj\Debug\Group5Project.Form1.resources
+C:\Users\Owner\source\repos\Group5Project\obj\Debug\Group5Project.Properties.Resources.resources
+C:\Users\Owner\source\repos\Group5Project\obj\Debug\Group5Project.csproj.GenerateResource.cache
+C:\Users\Owner\source\repos\Group5Project\obj\Debug\Group5Project.csproj.CoreCompileInputs.cache
+C:\Users\Owner\source\repos\Group5Project\bin\Debug\Group5Project.exe.config
+C:\Users\Owner\source\repos\Group5Project\bin\Debug\Group5Project.exe
+C:\Users\Owner\source\repos\Group5Project\bin\Debug\Group5Project.pdb
+C:\Users\Owner\source\repos\Group5Project\obj\Debug\Group5Project.exe
+C:\Users\Owner\source\repos\Group5Project\obj\Debug\Group5Project.pdb
+C:\Users\Owner\source\repos\Group5Project\obj\Debug\Group5Project.MainForm.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.csproj.AssemblyReference.cache
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.CourseInformationForm.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.Enrollment_Form.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.MainForm.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.MessagingForm.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.NotificationsForm.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.Properties.Resources.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.TimetableForm.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.csproj.GenerateResource.cache
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.csproj.CoreCompileInputs.cache
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.exe
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.pdb
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\bin\Debug\Group5Project.exe.config
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\bin\Debug\Group5Project.exe
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\bin\Debug\Group5Project.pdb
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\Group5Project\obj\Debug\Group5Project.Login.resources
