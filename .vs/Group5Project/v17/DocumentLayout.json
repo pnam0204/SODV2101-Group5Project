@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|c:\\nam\\bow valley college\\fall 2024\\sodv2101\\sodv2101-group5project\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|c:\\nam\\bow valley college\\fall 2024\\sodv2101\\sodv2101-group5project\\messagingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|solutionrelative:messagingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|c:\\nam\\bow valley college\\fall 2024\\sodv2101\\sodv2101-group5project\\messagingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|solutionrelative:messagingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|c:\\nam\\bow valley college\\fall 2024\\sodv2101\\sodv2101-group5project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB41B30-0033-4DA3-8CE8-DD45CE96D4D4}|Group5Project.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:20:57.252Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAArwB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:52:36.058Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
               "ToolTip": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\Login.cs [Design]",
               "RelativeToolTip": "Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T12:30:07.783Z",
+              "WhenOpened": "2024-11-30T21:38:43.337Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MessagingForm.cs",
+              "DocumentMoniker": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\MessagingForm.cs",
+              "RelativeDocumentMoniker": "MessagingForm.cs",
+              "ToolTip": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\MessagingForm.cs",
+              "RelativeToolTip": "MessagingForm.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwDMAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:34:14.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MessagingForm.cs [Design]",
+              "DocumentMoniker": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\MessagingForm.cs",
+              "RelativeDocumentMoniker": "MessagingForm.cs",
+              "ToolTip": "C:\\Nam\\Bow Valley College\\Fall 2024\\SODV2101\\SODV2101-Group5Project\\MessagingForm.cs [Design]",
+              "RelativeToolTip": "MessagingForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:34:10.998Z",
               "EditorCaption": " [Design]"
             }
           ]

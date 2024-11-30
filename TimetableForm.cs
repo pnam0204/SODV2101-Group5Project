@@ -25,6 +25,10 @@ namespace Group5Project
             dataGridViewTimetable.Rows.Add("Tuesday", "Physics 202");
 
         }
-        
+
+        private void TimetableForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.ShowMainForm();
+        }
     }
 }

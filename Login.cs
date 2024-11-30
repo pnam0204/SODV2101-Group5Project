@@ -14,6 +14,7 @@ namespace Group5Project
 
     public partial class Login : Form
     {
+        string username, password;
         public Login()
         {
             InitializeComponent();
@@ -26,17 +27,27 @@ namespace Group5Project
 
         private void Login_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "username" && textBox2.Text == "password")
+            username = textBox1.Text;
+            password = textBox2.Text;
+            if (VerifyLogin(username, password))
             {
+                ThisLogin.Username = username;
                 MessageBox.Show("login successful");
-                new MainForm().Show();
                 ClearText();
+
+                Program.mainForm = new MainForm();
+                Program.mainForm.Show();
+                Program.HideLoginForm();
             }
             else
             {
                 textBox3.Text = "Incorrect username or password";
                 textBox2.Text = "";
             }
+        }
+        private bool VerifyLogin(string username, string password)
+        {
+            return username == "username" && password == "password";
         }
         private void ClearText()
         {

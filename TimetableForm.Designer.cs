@@ -87,6 +87,7 @@
             this.Controls.Add(this.title6);
             this.Controls.Add(this.monthCalendar2);
             this.Name = "TimetableForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TimetableForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimetable)).EndInit();
             this.ResumeLayout(false);
 

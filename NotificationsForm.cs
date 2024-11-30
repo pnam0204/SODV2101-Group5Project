@@ -26,5 +26,9 @@ namespace Group5Project
             listBox1.Items.Add("Physics Lab on 21st Nov");
         }
 
+        private void NotificationsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.ShowMainForm();
+        }
     }
 }

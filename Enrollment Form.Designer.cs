@@ -76,6 +76,7 @@ namespace Group5Project
             this.Controls.Add(this.comboBox1);
             this.Name = "Enrollment_Form";
             this.Text = "Enrollment_Form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Enrollment_Form_FormClosed);
             this.ResumeLayout(false);
 
         }

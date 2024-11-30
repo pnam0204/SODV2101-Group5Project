@@ -24,6 +24,9 @@ namespace Group5Project
 
          }
 
-        
+        private void CourseInformationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.ShowMainForm();
+        }
     }
 }

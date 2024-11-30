@@ -64,6 +64,7 @@ namespace Group5Project
             this.Controls.Add(this.listBox1);
             this.Name = "NotificationsForm";
             this.Text = "NotificationsForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NotificationsForm_FormClosed);
             this.ResumeLayout(false);
 
         }

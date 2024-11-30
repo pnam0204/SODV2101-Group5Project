@@ -6,17 +6,36 @@ using System.Windows.Forms;
 
 namespace Group5Project
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static Login loginForm;
+        public static MainForm mainForm;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            loginForm = new Login();
+            Application.Run(loginForm);
+        }
+        public static void ShowLoginForm()
+        {
+            loginForm.Show();
+        }
+        public static void HideLoginForm()
+        {
+            loginForm.Hide();
+        }
+        public static void ShowMainForm()
+        {
+            mainForm.Show();
+        }
+        public static void HideMainForm()
+        {
+            mainForm.Hide();
         }
     }
 }

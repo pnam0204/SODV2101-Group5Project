@@ -91,6 +91,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "CourseInformationForm";
             this.Text = "Form2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CourseInformationForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

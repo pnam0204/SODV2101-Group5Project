@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.username = new System.Windows.Forms.Button();
-            this.password = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.loginbutton = new System.Windows.Forms.Button();
             this.cancelbutton = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -47,26 +47,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Study Anywhere and Everywhere";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // username
-            // 
-            this.username.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.username.Location = new System.Drawing.Point(217, 187);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(119, 23);
-            this.username.TabIndex = 1;
-            this.username.Text = "Username";
-            this.username.UseVisualStyleBackColor = false;
-            // 
-            // password
-            // 
-            this.password.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.password.Location = new System.Drawing.Point(217, 232);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(119, 23);
-            this.password.TabIndex = 2;
-            this.password.Text = "Password";
-            this.password.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -122,19 +102,37 @@
             this.textBox3.Text = "Please enter username and password";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(258, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Username";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(258, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Password";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(778, 454);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.loginbutton);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.username);
             this.Controls.Add(this.button1);
             this.Name = "Login";
             this.Text = "Login";
@@ -146,13 +144,13 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button username;
-        private System.Windows.Forms.Button password;
         private System.Windows.Forms.Button loginbutton;
         private System.Windows.Forms.Button cancelbutton;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
