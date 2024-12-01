@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Group5Project
 {
@@ -15,18 +16,24 @@ namespace Group5Project
         public CourseInformationForm()
         {
             InitializeComponent();
+            Program.centerControl(title);
+            dataGridView1.AutoGenerateColumns = false;
             LoadCourses();
         }
+        
         private void LoadCourses()
         {
-            dataGridView1.Rows.Add("Math 101", "Basic Algebra", "MWF 10:00 - 11:00");
-            dataGridView1.Rows.Add("Physics 202", "Mechanics", "TTh 2:00-3:30");
-
-         }
-
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = Courses.List;
+        }
         private void CourseInformationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Program.ShowMainForm();
+            Forms.ShowMainForm();
+        }
+
+        private void CourseInformationForm_Resize(object sender, EventArgs e)
+        {
+            Program.centerControl(title);
         }
     }
 }

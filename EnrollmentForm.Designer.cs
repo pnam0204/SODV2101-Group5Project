@@ -2,7 +2,7 @@
 
 namespace Group5Project
 {
-    partial class NotificationsForm
+    partial class EnrollmentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,55 +30,68 @@ namespace Group5Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.EnrollBtn = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // listBox1
+            // comboBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(259, 221);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(258, 180);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(152, 193);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(472, 24);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // EnrollBtn
+            // 
+            this.EnrollBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.EnrollBtn.Font = new System.Drawing.Font("Microsoft Uighur", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnrollBtn.Location = new System.Drawing.Point(294, 302);
+            this.EnrollBtn.Name = "EnrollBtn";
+            this.EnrollBtn.Size = new System.Drawing.Size(201, 63);
+            this.EnrollBtn.TabIndex = 1;
+            this.EnrollBtn.Text = "Enroll";
+            this.EnrollBtn.UseVisualStyleBackColor = false;
+            this.EnrollBtn.Click += new System.EventHandler(this.btnEnroll_Click);
             // 
             // title
             // 
             this.title.BackColor = System.Drawing.SystemColors.Window;
             this.title.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(207, 55);
+            this.title.Location = new System.Drawing.Point(219, 39);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(359, 97);
             this.title.TabIndex = 11;
             this.title.Text = "Study Anywhere and Everywhere";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // NotificationsForm
+            // EnrollmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(782, 453);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.listBox1);
-            this.Name = "NotificationsForm";
-            this.Text = "Notifications";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NotificationsForm_FormClosed);
-            this.Resize += new System.EventHandler(this.NotificationsForm_Resize);
+            this.Controls.Add(this.EnrollBtn);
+            this.Controls.Add(this.comboBox1);
+            this.Name = "EnrollmentForm";
+            this.Text = "Enrollment";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Enrollment_Form_FormClosed);
+            this.Resize += new System.EventHandler(this.EnrollmentForm_Resize);
             this.ResumeLayout(false);
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Enrollment_Form_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button EnrollBtn;
         private System.Windows.Forms.Label title;
     }
 }

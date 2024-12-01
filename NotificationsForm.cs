@@ -12,11 +12,10 @@ namespace Group5Project
 {
     public partial class NotificationsForm : Form
     {
-        //private object listBox1;
-
         public NotificationsForm()
         {
             InitializeComponent();
+            Program.centerControl(title, listBox1);
             LoadNotifications();
         }
 
@@ -28,7 +27,12 @@ namespace Group5Project
 
         private void NotificationsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Program.ShowMainForm();
+            Forms.ShowMainForm();
+        }
+
+        private void NotificationsForm_Resize(object sender, EventArgs e)
+        {
+            Program.centerControl(title, listBox1);
         }
     }
 }

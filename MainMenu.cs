@@ -11,46 +11,52 @@ using System.Windows.Forms;
 
 namespace Group5Project
 {
-    public partial class MainForm : Form
+    public partial class MainMenu : Form
     {
-        public MainForm()
+        public MainMenu()
         {
             InitializeComponent();
+            Program.centerControl(title, panel1);
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
             new CourseInformationForm().Show();
-            Program.HideMainForm();
+            Forms.HideMainForm();
         }
 
         private void btnEnrollment_Click(object sender, EventArgs e)
         {
-            new Enrollment_Form().Show();
-            Program.HideMainForm();
+            new EnrollmentForm().Show();
+            Forms.HideMainForm();
         }
 
         private void btnTimeTable_Click(object sender, EventArgs e)
         {
             new TimetableForm().Show();
-            Program.HideMainForm();
+            Forms.HideMainForm();
         }
 
         private void btnNotifications_Click(object sender, EventArgs e)
         {
             new NotificationsForm().Show();
-            Program.HideMainForm();
+            Forms.HideMainForm();
         }
 
         private void btnMessaging_Click(object sender, EventArgs e)
         {
             new MessagingForm().Show();
-            Program.HideMainForm();
+            Forms.HideMainForm();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Program.ShowLoginForm();
+            Forms.ShowLoginForm();
+        }
+
+        private void MainMenu_Resize(object sender, EventArgs e)
+        {
+            Program.centerControl(title, panel1);
         }
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Group5Project
 {
@@ -11,31 +12,22 @@ namespace Group5Project
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        public static Login loginForm;
-        public static MainForm mainForm;
+        
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            loginForm = new Login();
-            Application.Run(loginForm);
+            Courses.LoadCSV();
+            Forms.loginForm = new Login();
+            Application.Run(Forms.loginForm);
         }
-        public static void ShowLoginForm()
+        public static void centerControl(params Control[] e)
         {
-            loginForm.Show();
-        }
-        public static void HideLoginForm()
-        {
-            loginForm.Hide();
-        }
-        public static void ShowMainForm()
-        {
-            mainForm.Show();
-        }
-        public static void HideMainForm()
-        {
-            mainForm.Hide();
+            foreach (Control c in e)
+            {
+                c.Left = (c.Parent.ClientSize.Width - c.Width) / 2;
+            }
         }
     }
 }

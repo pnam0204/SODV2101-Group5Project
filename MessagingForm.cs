@@ -18,6 +18,7 @@ namespace Group5Project
         public MessagingForm()
         {
             InitializeComponent();
+            Program.centerControl(title, panel1);
             user = ThisLogin.Username;
             conversations = new Dictionary<string, List<string>>();
         }
@@ -52,7 +53,7 @@ namespace Group5Project
             AddMessage("System", "Message sent");
         }
 
-        private void btnSendMessage_Click(object sender, EventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(currentReceiver))
             {
@@ -90,7 +91,12 @@ namespace Group5Project
 
         private void MessagingForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Program.ShowMainForm();
+            Forms.ShowMainForm();
+        }
+
+        private void MessagingForm_Resize(object sender, EventArgs e)
+        {
+            Program.centerControl(title, panel1);
         }
     }
 }
