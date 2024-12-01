@@ -121,6 +121,7 @@
     <EmbeddedResource Include="TimetableForm.resx">
       <DependentUpon>TimetableForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CourseInformation.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

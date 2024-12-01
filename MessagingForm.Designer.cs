@@ -36,11 +36,12 @@ namespace Group5Project
             this.lstMessages = new System.Windows.Forms.ListBox();
             this.lstReceivers = new System.Windows.Forms.ListBox();
             this.txtReceiver = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // title8
             // 
-            this.title8.Location = new System.Drawing.Point(120, 45);
+            this.title8.Location = new System.Drawing.Point(160, 47);
             this.title8.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.title8.Name = "title8";
             this.title8.Size = new System.Drawing.Size(301, 67);
@@ -51,14 +52,14 @@ namespace Group5Project
             // txtMessageInput
             // 
             this.txtMessageInput.Font = new System.Drawing.Font("Microsoft Uighur", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMessageInput.Location = new System.Drawing.Point(120, 407);
+            this.txtMessageInput.Location = new System.Drawing.Point(160, 406);
             this.txtMessageInput.Name = "txtMessageInput";
             this.txtMessageInput.Size = new System.Drawing.Size(301, 32);
             this.txtMessageInput.TabIndex = 1;
             // 
             // btnSendMessage
             // 
-            this.btnSendMessage.Location = new System.Drawing.Point(427, 407);
+            this.btnSendMessage.Location = new System.Drawing.Point(467, 406);
             this.btnSendMessage.Name = "btnSendMessage";
             this.btnSendMessage.Size = new System.Drawing.Size(75, 31);
             this.btnSendMessage.TabIndex = 2;
@@ -70,7 +71,7 @@ namespace Group5Project
             // 
             this.lstMessages.FormattingEnabled = true;
             this.lstMessages.ItemHeight = 31;
-            this.lstMessages.Location = new System.Drawing.Point(120, 154);
+            this.lstMessages.Location = new System.Drawing.Point(161, 154);
             this.lstMessages.Name = "lstMessages";
             this.lstMessages.Size = new System.Drawing.Size(301, 221);
             this.lstMessages.TabIndex = 3;
@@ -79,7 +80,7 @@ namespace Group5Project
             // 
             this.lstReceivers.FormattingEnabled = true;
             this.lstReceivers.ItemHeight = 31;
-            this.lstReceivers.Location = new System.Drawing.Point(12, 154);
+            this.lstReceivers.Location = new System.Drawing.Point(54, 154);
             this.lstReceivers.Name = "lstReceivers";
             this.lstReceivers.Size = new System.Drawing.Size(101, 221);
             this.lstReceivers.TabIndex = 4;
@@ -87,11 +88,21 @@ namespace Group5Project
             // 
             // txtReceiver
             // 
-            this.txtReceiver.Location = new System.Drawing.Point(12, 406);
+            this.txtReceiver.Location = new System.Drawing.Point(54, 406);
             this.txtReceiver.Name = "txtReceiver";
             this.txtReceiver.Size = new System.Drawing.Size(100, 32);
             this.txtReceiver.TabIndex = 5;
             this.txtReceiver.TextChanged += new System.EventHandler(this.txtReceiver_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 406);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 31);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "To:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MessagingForm
             // 
@@ -99,6 +110,7 @@ namespace Group5Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(577, 487);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtReceiver);
             this.Controls.Add(this.lstReceivers);
             this.Controls.Add(this.lstMessages);
@@ -128,5 +140,6 @@ namespace Group5Project
         private System.Windows.Forms.ListBox lstMessages;
         private System.Windows.Forms.ListBox lstReceivers;
         private System.Windows.Forms.TextBox txtReceiver;
+        private System.Windows.Forms.Label label1;
     }
 }

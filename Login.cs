@@ -14,6 +14,8 @@ namespace Group5Project
 
     public partial class Login : Form
     {
+        string[] userArray = { "user", "admin", "student", "teacher"};
+        string passCheck = "password";
         string username, password;
         public Login()
         {
@@ -47,7 +49,11 @@ namespace Group5Project
         }
         private bool VerifyLogin(string username, string password)
         {
-            return username == "username" && password == "password";
+            if (userArray.Contains(username) && password == passCheck)
+            {
+                return true;
+            }
+            else return false;
         }
         private void ClearText()
         {
@@ -57,5 +63,3 @@ namespace Group5Project
         }
     }
 }
-
-     
