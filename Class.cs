@@ -8,7 +8,7 @@ using System.IO;
 
 namespace Group5Project
 {
-    public static class Forms
+    static class Forms
     {
         public static Login loginForm;
         public static MainMenu mainForm;
@@ -29,8 +29,7 @@ namespace Group5Project
             mainForm.Hide();
         }
     }
-
-    public static class Courses
+    static class Courses
     {
         public static List<CourseInfo> List = new List<CourseInfo>();
         public static void LoadCSV()
@@ -55,9 +54,26 @@ namespace Group5Project
             }
         }
     }
-    public static class ThisLogin
+    static class ThisLogin
     {
         public static string Username { get; set; }
+    }
+    static class Storage
+    {
+        public static List<Conversation> Conversations = new List<Conversation>();
+    }
+    public class Conversation
+    {
+        //public static Dictionary<string, List<string>> Conversations = new Dictionary<string, List<string>>();
+        public string Sender { get; set; }
+        public string Receiver {  get; set; }
+        public List<string> Contents { get; set; }
+        public Conversation(string sender, string receiver)
+        {
+            Sender = sender;
+            Receiver = receiver;
+            Contents = new List<string>();
+        }
     }
     public class Timetable
     {
