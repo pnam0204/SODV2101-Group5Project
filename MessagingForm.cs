@@ -18,9 +18,9 @@ namespace Group5Project
         public MessagingForm()
         {
             InitializeComponent();
-            Program.centerControl(title, panel1);
-            user = ThisLogin.Username;
-            storedConversations = Storage.Conversations;
+            Global.centerControl(title, panel1);
+            user = Global.currentUser.Username;
+            storedConversations = Global.PastConversations;
             currentReceiver = UserConversation().Count > 0 ? UserConversation()[0].Receiver : "";
             DisplayReceivers(user);
             DisplayConversation(user, currentReceiver);
@@ -113,12 +113,12 @@ namespace Group5Project
 
         private void MessagingForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Forms.ShowMainForm();
+            Global.ShowMainForm();
         }
 
         private void MessagingForm_Resize(object sender, EventArgs e)
         {
-            Program.centerControl(title, panel1);
+            Global.centerControl(title, panel1);
         }
     }
 }

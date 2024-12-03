@@ -5,11 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace Group5Project
 {
-    static class Forms
+    static class Global
     {
+        public static List<CourseInfo> CourseList = new List<CourseInfo>();
+        public static List<User> UserList = new List<User>();
+        public static User currentUser = new User();
+        public static List<Conversation> PastConversations = new List<Conversation>();
+
         public static Login loginForm;
         public static MainMenu mainForm;
         public static void ShowLoginForm()
@@ -28,67 +34,14 @@ namespace Group5Project
         {
             mainForm.Hide();
         }
-    }
-    static class Courses
-    {
-        public static List<CourseInfo> List = new List<CourseInfo>();
-        public static void LoadCSV()
+        public static void centerControl(params Control[] e)
         {
-            string filePath = @"..\..\CourseInformation.csv";
-            try
+            foreach (Control c in e)
             {
-                using (var reader = File.OpenText(filePath))
-                {
-                    string input = reader.ReadLine();
-                    while ((input = reader.ReadLine()) != null)
-                    {
-                        CourseInfo course = new CourseInfo(input);
-                        List.Add(course);
-                    }
-                }
-                MessageBox.Show("Data Loaded Successfully!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading file: {ex.Message}");
+                c.Left = (c.Parent.ClientSize.Width - c.Width) / 2;
             }
         }
-    }
-    static class ThisLogin
-    {
-        public static string Username { get; set; }
-    }
-    static class Storage
-    {
-        public static List<Conversation> Conversations = new List<Conversation>();
-    }
-    public class Conversation
-    {
-        //public static Dictionary<string, List<string>> Conversations = new Dictionary<string, List<string>>();
-        public string Sender { get; set; }
-        public string Receiver {  get; set; }
-        public List<string> Contents { get; set; }
-        public Conversation(string sender, string receiver)
-        {
-            Sender = sender;
-            Receiver = receiver;
-            Contents = new List<string>();
-        }
-    }
-    public class Timetable
-    {
-        public string Day { get; set; }
-        public string CourseName { get; set; } // Comma-separated list of courses for the day
-    }
-    public class CourseInfo
-    {
-        public string CourseName { get; set; }
-        public string Description { get; set; }
-        public string Day { get; set; }
-        public string Time { get; set; }
-        public List<string> StudentList = new List<string>();
-
-        private string NextValue(string csv, ref int index)
+        public static string NextValue(string csv, ref int index)
         {
             string result = "";
             if (index >= csv.Length) return result; // End of string reached
@@ -124,20 +77,85 @@ namespace Group5Project
             }
             return result;
         }
+        public static void LoadCSV<T>(string filePath, List<T> list, Func<string, T> createObject)
+        {
+            try
+            {
+                using (var reader = File.OpenText(filePath))
+                {
+                    string input = reader.ReadLine();
+                    while ((input = reader.ReadLine()) != null)
+                    {
+                        T obj = createObject(input);
+                        list.Add(obj);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading file: {ex.Message}");
+            }
+        }
+    }
+    public class User
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public User()
+        {
+
+        }
+        public User (string username, string password)
+        {
+            Username = username;
+            Password = password;
+        }
+        public User (string csv)
+        {
+            int index = 0;
+            Username = Global.NextValue(csv, ref index);
+            Password = Global.NextValue(csv, ref index);
+        }
+    }
+    public class Conversation
+    {
+        public string Sender { get; set; }
+        public string Receiver {  get; set; }
+        public List<string> Contents { get; set; }
+        public Conversation(string sender, string receiver)
+        {
+            Sender = sender;
+            Receiver = receiver;
+            Contents = new List<string>();
+        }
+    }
+    public class Timetable
+    {
+        public string Day { get; set; }
+        public string CourseName { get; set; } // Comma-separated list of courses for the day
+    }
+    public class CourseInfo
+    {
+        public string CourseName { get; set; }
+        public string Description { get; set; }
+        public string Day { get; set; }
+        public string Time { get; set; }
+        public List<string> StudentList = new List<string>();
+
         public CourseInfo(string csv)
         {
             int index = 0;
             try
             {
-                CourseName = NextValue(csv, ref index);
-                Description = NextValue(csv, ref index);
-                Day = NextValue(csv, ref index);
-                Time = NextValue(csv, ref index);
-                string student = NextValue(csv, ref index);
+                CourseName = Global.NextValue(csv, ref index);
+                Description = Global.NextValue(csv, ref index);
+                Day = Global.NextValue(csv, ref index);
+                Time = Global.NextValue(csv, ref index);
+                string student = Global.NextValue(csv, ref index);
                 while (!string.IsNullOrWhiteSpace(student)) // Stop on empty or null strings
                 {
                     StudentList.Add(student);
-                    student = NextValue(csv, ref index);
+                    student = Global.NextValue(csv, ref index);
                 }
             }
             catch (Exception ex)

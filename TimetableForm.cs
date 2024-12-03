@@ -21,7 +21,7 @@ namespace Group5Project
             Timetable = new List<Timetable>();
             FillTimetable();
             LoadTimetable();
-            Program.centerControl(title);
+            Global.centerControl(title);
         }
         private void LoadTimetable()
         {
@@ -30,18 +30,17 @@ namespace Group5Project
         }
         private void TimetableForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Forms.ShowMainForm();
+            Global.ShowMainForm();
         }
         private void FillTimetable()
         {
             string[] daysOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
-            //var timetable = new List<TimetableEntry>();
             foreach (var day in daysOfWeek)
             {
                 // Filter courses by day and check current user is enrolled
-                var coursesToday = Courses.List
+                var coursesToday = Global.CourseList
                     .Where(course => course.Day.IndexOf(day, StringComparison.OrdinalIgnoreCase) >= 0
-                    && course.StudentList.Contains(ThisLogin.Username))
+                    && course.StudentList.Contains(Global.currentUser.Username))
                     .ToList();
 
                 if (coursesToday.Any()) // If there are any courses for this day
@@ -61,7 +60,7 @@ namespace Group5Project
 
         private void TimetableForm_Resize(object sender, EventArgs e)
         {
-            Program.centerControl(title);
+            Global.centerControl(title);
         }
     }
 }

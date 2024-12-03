@@ -15,13 +15,12 @@ namespace Group5Project
 
     public partial class Login : Form
     {
-        string[] userArray = { "user", "admin", "student", "teacher", "p.pham746"};
-        string[] passArray = { "password", "0000", "453746" };
         string username, password;
         public Login()
         {
             InitializeComponent();
-            Program.centerControl(title, panel1, label3);
+            Global.LoadCSV(@"UserList.csv", Global.UserList, input => new User(input));
+            Global.centerControl(title, panel1, label3);
         }
 
         private void Login_Cancel(object sender, EventArgs e)
@@ -35,13 +34,13 @@ namespace Group5Project
             password = textBox2.Text;
             if (VerifyLogin(username, password))
             {
-                ThisLogin.Username = username;
+                Global.currentUser = new User(username, password);
                 MessageBox.Show("login successful");
                 ClearText();
 
-                Forms.mainForm = new MainMenu();
-                Forms.mainForm.Show();
-                Forms.HideLoginForm();
+                Global.mainForm = new MainMenu();
+                Global.mainForm.Show();
+                Global.HideLoginForm();
             }
             else
             {
@@ -51,15 +50,16 @@ namespace Group5Project
         }
         private bool VerifyLogin(string username, string password)
         {
-            if (userArray.Contains(username) && passArray.Contains(password))
+            var list = Global.UserList;
+            foreach (var e in list)
             {
-                return true;
+                if (e.Username == username && e.Password == password) return true;
             }
-            else return false;
+            return false;
         }
         private void Login_Resize(object sender, EventArgs e)
         {
-            Program.centerControl(title, panel1, label3);
+            Global.centerControl(title, panel1, label3);
         }
 
         private void ClearText()

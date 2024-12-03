@@ -16,47 +16,47 @@ namespace Group5Project
         public MainMenu()
         {
             InitializeComponent();
-            Program.centerControl(title, panel1);
+            Global.centerControl(title, panel1);
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
             new CourseInformationForm().Show();
-            Forms.HideMainForm();
+            Global.HideMainForm();
         }
 
         private void btnEnrollment_Click(object sender, EventArgs e)
         {
             new EnrollmentForm().Show();
-            Forms.HideMainForm();
+            Global.HideMainForm();
         }
 
         private void btnTimeTable_Click(object sender, EventArgs e)
         {
             new TimetableForm().Show();
-            Forms.HideMainForm();
+            Global.HideMainForm();
         }
 
         private void btnNotifications_Click(object sender, EventArgs e)
         {
             new NotificationsForm().Show();
-            Forms.HideMainForm();
+            Global.HideMainForm();
         }
 
         private void btnMessaging_Click(object sender, EventArgs e)
         {
             new MessagingForm().Show();
-            Forms.HideMainForm();
+            Global.HideMainForm();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Forms.ShowLoginForm();
+            Global.ShowLoginForm();
         }
 
         private void MainMenu_Resize(object sender, EventArgs e)
         {
-            Program.centerControl(title, panel1);
+            Global.centerControl(title, panel1);
         }
     }
 

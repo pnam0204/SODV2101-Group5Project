@@ -55,7 +55,6 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(139, 22);
             this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "password";
             // 
             // loginbutton
             // 

@@ -15,12 +15,12 @@ namespace Group5Project
         public EnrollmentForm()
         {
             InitializeComponent();
-            Program.centerControl(title, comboBox1, EnrollBtn);
+            Global.centerControl(title, comboBox1, EnrollBtn);
             LoadCourses();
         }
         private void LoadCourses()
         {
-            foreach (var courses in Courses.List)
+            foreach (var courses in Global.CourseList)
             {
                 comboBox1.Items.Add(courses.CourseName);
             }
@@ -28,13 +28,13 @@ namespace Group5Project
         private void btnEnroll_Click(object sender, EventArgs e)
         {
             string selectedCourseName = comboBox1.SelectedItem.ToString();
-            var selectedCourse = Courses.List
+            var selectedCourse = Global.CourseList
                 .First(course => course.CourseName == selectedCourseName);
             if (selectedCourse != null)
             {
-                if (!selectedCourse.StudentList.Contains(ThisLogin.Username))
+                if (!selectedCourse.StudentList.Contains(Global.currentUser.Username))
                 {
-                    selectedCourse.StudentList.Add(ThisLogin.Username);
+                    selectedCourse.StudentList.Add(Global.currentUser.Username);
                     MessageBox.Show($"You have successfully enrolled in {selectedCourseName}.");
                 }
                 else MessageBox.Show($"You are already enrolled in {selectedCourseName}!");
@@ -43,12 +43,12 @@ namespace Group5Project
         }
         private void Enrollment_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Forms.ShowMainForm();
+            Global.ShowMainForm();
         }
 
         private void EnrollmentForm_Resize(object sender, EventArgs e)
         {
-            Program.centerControl(title, comboBox1, EnrollBtn);
+            Global.centerControl(title, comboBox1, EnrollBtn);
         }
     }
 }

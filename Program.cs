@@ -18,16 +18,10 @@ namespace Group5Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Courses.LoadCSV();
-            Forms.loginForm = new Login();
-            Application.Run(Forms.loginForm);
+            Global.LoadCSV(@"CourseInformation.csv", Global.CourseList, input => new CourseInfo(input));
+            Global.loginForm = new Login();
+            Application.Run(Global.loginForm);
         }
-        public static void centerControl(params Control[] e)
-        {
-            foreach (Control c in e)
-            {
-                c.Left = (c.Parent.ClientSize.Width - c.Width) / 2;
-            }
-        }
+        
     }
 }

@@ -42,3 +42,4 @@ C:\Nam\Bow Valley College\Fall 2024\SODV2101\SODV2101-Group5Project\bin\Debug\Co
 C:\Nam\Bow Valley College\Fall 2024\SODV2101\SODV2101-Group5Project\obj\Debug\Group5Project.TimetableForm.resources
 C:\Nam\Bow Valley College\Fall 2024\SODV2101\SODV2101-Group5Project\obj\Debug\Group5Project.EnrollmentForm.resources
 C:\Nam\Bow Valley College\Fall 2024\SODV2101\SODV2101-Group5Project\obj\Debug\Group5Project.MainMenu.resources
+C:\Nam\Bow Valley College\Fall 2024\SODV2101\SODV2101-Group5Project\bin\Debug\UserList.csv
